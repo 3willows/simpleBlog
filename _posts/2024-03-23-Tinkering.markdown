@@ -21,8 +21,6 @@ It stands to reason that the skills and habits needed to get started in the new 
 
 In the 2000s, it was possible to get into computing just by tinkering and experimentation.  But now there is so much that one could tinkle with, it is easy to lose the way.  
 
-Worst, “building things” has now become a key social signal (among tech circles).  One’s sense of achievement of making things are now inevitably intertwined with some kind of social positioning of ourselves against the influencers we follow. 
+Worst, “building things” has now become a key social signal (among tech circles).  Any private enjoyment of making things is now intertwined with some kind of social positioning with influencers of different kinds.
 
-With so much choice (and advertisement) in front of us, just digging in and consuming may not be good enough.  Habits that served us and hunter-gatherers are unhelpful when we have McDonalds.  Arguably now more than ever before, one needs to pick and choose.
-
-A different kind of learning strategy may be required.  Habits and instincts that served us well in an age of relative information scarcity may not work in an age of tailor-made over-abundance.
+With so much choice (and advertisement) in front of us, just tinkering without conscious planning may not be good enough. 
