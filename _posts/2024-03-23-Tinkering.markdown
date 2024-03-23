@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Can someone “tinker” her way into programming in the 2020s?"
+title:  "Can someone tinker her way into programming in the 2020s?"
 date:   2024-03-23
 categories: meta
 ---
