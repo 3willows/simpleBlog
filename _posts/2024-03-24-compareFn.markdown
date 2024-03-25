@@ -2,7 +2,7 @@
 layout: post
 title:  "In Array.sort()’s compareFn, the order of a and b doesn't matter"
 date:   2024-03-24
-categories: setting up 
+categories: Javascript
 ---
 
 MDN documentation on Array.prototype.sort() says of the the optional CompareFn,
