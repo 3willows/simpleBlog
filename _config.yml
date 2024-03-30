@@ -21,7 +21,7 @@
 title: Passing thoughts 
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A journey into web apps in the 2020s.
+  A journey into web development in the 2020s.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://3willows.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
