@@ -67,20 +67,7 @@ Some points that were consolidated for me after the exercise:
 
 - Promise() takes an executor as its paramater. The executor receives two functions as parameters: resolveFunc (1st parameter) and rejectFunc (2nd parameter).
 
-```js
-x.then((result) => {
-  console.log(result)
-  return result
-})
-  .then((result) => console.log(result))
-  .catch((result) => console.log(result))
-
-z.then(() => {
-  return "hello"
-}).then(alert)
-```
-
 Sources:
 
 - [Javascript.Info](https://javascript.info/promise-basics)
-- [Jye Lewis explanation](https://jyelewis.com/blog/2021-10-01-javascript-promises-the-history/)
+- [Jye Lewis's explanation on his blog](https://jyelewis.com/blog/2021-10-01-javascript-promises-the-history/)
