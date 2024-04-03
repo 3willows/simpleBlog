@@ -5,7 +5,7 @@ date: 2024-04-02
 categories: Javascript
 ---
 
-Quick quiz: what do the following code snippets do? Find out by opening the console in your browser.
+Quick test: what do these code snippets do? 
 
 ```js
 const a = new Promise(function (a) {
@@ -48,12 +48,12 @@ const j = new Promise(function (a, b) {
 
 const k = (number) => {
   return new Promise(function (a, b) {
-    b(number*2)
+    a(number * 2)
   })
 }
 ```
 
-One option to test:
+Check by opening the console in your browser and test with e.g.
 
 ```js
 x.then(console.log).catch(alert)
@@ -65,7 +65,7 @@ Some points that were consolidated for me after the exercise:
 
 - > Promise() can only be constructed with new. Attempting to call it without new throws a TypeError. --- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#syntax)
 
-- The Promise() takes an executor as its paramater. The executor receives two functions as parameters: resolveFunc (1st parameter) and rejectFunc (2nd parameter).
+- Promise() takes an executor as its paramater. The executor receives two functions as parameters: resolveFunc (1st parameter) and rejectFunc (2nd parameter).
 
 ```js
 x.then((result) => {
@@ -80,5 +80,7 @@ z.then(() => {
 }).then(alert)
 ```
 
-Sources: -[Javascript.Info](https://javascript.info/promise-basics)
-https://jyelewis.com/blog/2021-10-01-javascript-promises-the-history/
+Sources:
+
+- [Javascript.Info](https://javascript.info/promise-basics)
+- [Jye Lewis explanation](https://jyelewis.com/blog/2021-10-01-javascript-promises-the-history/)
