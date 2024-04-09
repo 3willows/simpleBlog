@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Dao of Web Design"
+date: 2024-04-09
+categories: CSS
+---
+
+I fell in love with the technology of CSS recently, having obsessively followed a YouTuber (and CSS guru) called Kevin Powell.
+
+One of the articles that Kevin recommends the [Dao of Web Design](https://alistapart.com/article/dao/). 
+
+In essence, the article argues that web as a medium is fundamentally different from printed media because the layout of a webpage has to work on so many different devices (mobile phone, tablet, laptop screen, Desktop screen, even screen readers for the visually impaired), not to speak of different browswers and customisation such as [dark reader](https://darkreader.org/).
+
+A print designer can control to a large extent the size and quality of the paper on which the design is displayed: a web designer cannot.
+
+Yet this is not necessarily a cause for despair.  The fluidity of webpage display should instead lead us to rethink what we are trying to achieve when we design web media.  
+
+It is no longer enough to think about how some information is presented once, and then forget about it once it is published.  Instead some core principles need to be extracted so that the design will give a consistent experience across different formats (and be easy to maintain and modify in light of changes in technology).  Hence the reference to “Dao” or the way.
+
+Kevin also points out that many people are just much too impatient with CSS.  They assume it is a “simple” technology and just resort to looking up some answers on Google without understanding basic principles.  
+
+But paradoxically in CSS more than in (say) Javascript, fundamentals matter even more.  As mentioned above, the layout of a web page differs from device to device and from browser to browser.  It has a lot more moving parts than most programming environments.  Errors (and glitches) are much more context-specific and hard to summarise in a search query.  So it is less easy in CSS than in other programming languages to just get your hands dirty first and figure out the principles as you go along by way of Google searches.
+
+A small illustration from today.  I was doing a React project using Tailwind, and I got frustrated that somehow a <div> element wasn’t filling out the screen as it should.  I flailed around for an answer within React/Tailwind.  But after a while, I realised the issue probably lies not with the Tailwind, but with the background colour set on the index.html file.  
+
+Fixing this did not require some extra knowledge I had to look up online: instead all I needed was to slow down and think through how the CSS is applies to the html displayed via React.
+
+While I am still very far from having a good grasp of CSS fundamentals, the “Dao of Web Design” really helped me see the point of it better and motivate me to understand concepts such as flex, grid and box sizing in greater depth.
+
+https://www.youtube.com/watch?v=2GeMknXoGaA&t=605s 
+https://flexboxfroggy.com/
+https://cssgridgarden.com/
+https://codingfantasy.com/games/css-grid-attack
+https://flukeout.github.io/
