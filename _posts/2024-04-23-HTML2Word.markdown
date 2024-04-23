@@ -5,7 +5,9 @@ date: 2024-04-23
 categories: Javascript
 ---
 
-**Demo**: button at lower right hand corner [here](https://3willows.github.io/barAdmission/#/info)
+**Demo**: download button [here](https://3willows.github.io/barAdmission/#/info) for laptop and desktop
+
+**Background**
 
 There is an issue with [Barrister Admission Bundle](https://3willows.github.io/barAdmission/#/) I have wanted to solve for some time.
 
@@ -19,41 +21,62 @@ The problem is that after users edits the Word document, they cannot save it (ea
 
 This works well enough for me, but is not an acceptable user experience!
 
-Over the course of today, I explored a few potential solutions.
+**Potential solutions**
 
-**Pandoc-server** Pandoc is a famous tool made by a professional philosopher, John MacFarlane, at UC Berkley. It is a tool that is first and foremost intended to be used on the command line. But there is also a [pandoc-server](https://pandoc.org/pandoc-server.htmlfunction) which is intended for use on web-servers.
+Over the course of today, I explored these potential solutions.
 
-There is a [demo](https://pandoc.org/try/) that is very impressive. Pandoc is also plainly a very well regarded and reliable (it even has its own [Wikipedia page](https://en.wikipedia.org/wiki/Pandoc))!
+***Pandoc-server*** Pandoc is a famous tool made by a professional philosopher, John MacFarlane, at UC Berkley. It is a tool that is first and foremost intended to be used on the command line. But there is also a [pandoc-server](https://pandoc.org/pandoc-server.htmlfunction) which is intended for use on web-servers.
+
+There is a [demo](https://pandoc.org/try/) that is very impressive. Pandoc is also a very well regarded and reliable (it even has its own [Wikipedia page](https://en.wikipedia.org/wiki/Pandoc))!
 
 However, Pandoc is itself written in Haskell. Judging by its name, pandoc-server needs to work in a server, where I need to use the executable (which should be a binary file(?)) as a CGI (common gateway interface) file (according to the [docs](https://pandoc.org/pandoc-server.html#description)).
 
-This a bit too advanced for me, so I shelved this after reading into the background.
+This a bit too advanced for me, so I shelved this after reading a bit into the background.
 
-**A number of NPM packages,** such as [html-to-docx](https://www.npmjs.com/package/html-to-docx), [html-docx-js](https://github.com/evidenceprime/html-docx-js) and [node-pandoc](https://www.npmjs.com/package/node-pandoc).
+***NPM packages*** such as [html-to-docx](https://www.npmjs.com/package/html-to-docx), [html-docx-js](https://github.com/evidenceprime/html-docx-js) and [node-pandoc](https://www.npmjs.com/package/node-pandoc).
 
 But the problem with these packages is that they seem to be a few years old, and their demos often don’t work any more (which do not inspire a great deal of confidence).
 
-**[jQuery-Word-Export](https://github.com/markswindoll/jQuery-Word-Export)** This is an even older project (over 10 years old)! But it has a [demo](https://markswindoll.github.io/jquery-word-export/) that still does work.
+***[jQuery-Word-Export](https://github.com/markswindoll/jQuery-Word-Export)*** This is an even older project (over 10 years old)! But it has a [demo](https://markswindoll.github.io/jquery-word-export/) that still does work.
 
 More importantly, the [source code](https://github.com/markswindoll/jQuery-Word-Export/blob/master/jquery.wordexport.js) is just 84 lines, and many of them seem to be dealing with the issues with images (which I need not handle)!
 
+**Diggning into jQuery-Word-Export**
+
 Even though I have no experience of jQuery (beyond flipping through a book about it for around 30 minutes), I thought I would give this a go.
 
-Integrating jQuery with React turned out to be slightly challenging. 
+Integrating jQuery with React turned out to be slightly challenging.
 
-The ideas are so different: for example, how should I select an element with (say) an ID (with the # sign) across files?  There are probably good ways of solving this, but I decided to go in a different direction.
+The ideas are so different: for example, how should I select an element with (say) an ID (with the # sign) across files? There are probably good ways of solving this, but I decided to go in a different direction.
 
-Digging into the short source code to jQuery-Word-Export, I realised the crucial ideas are only:-
+Digging into the source code, I realised the crucial ideas are only:-
 
-- Placing the html firmly within the “Mime-Version: 1.0\nContent-Base:…” heading to the document.
+- Placing the html firmly within the “Mime-Version: 1.0\nContent-Base:…” heading to the document, i.e.
 
-- Using Blob to effect a conversion of the data format. 
+```js
+var fileContent =
+  static.mhtml.top.replace(
+    "_html_",
+    static.mhtml.head.replace("_styles_", styles) +
+      static.mhtml.body.replace("_body_", markup.html())
+  ) + mhtmlBottom
+```
 
-In my earlier code, when I open the resulting Word file with VS Code, I could still see HTML elements such as ```<div>``` ```<p>``` etc.
+- Using Blob to effect a conversion of the data format: i.e.
 
-But with jQuery-Word-Export, the body of the resulting Word document has been transforming into long and indecipherable ASCII characters, suggesting some kind of transformation at when the HTML is used to create a Blob object.
+```js
+var blob = new Blob([fileContent], {
+  type: "application/msword;charset=utf-8",
+})
+```
 
-With these ideas in mind, I decided to pick apart the jQuery function in jQuery-Word-Export and translate it to pure JavaScript. 
+In my earlier code, when I open the resulting Word file with VS Code, I could still see HTML elements such as `<div>` `<p>` etc.
+
+But with jQuery-Word-Export, the body of the resulting Word document has been transformed into long and indecipherable ASCII characters, suggesting some substantial changes took place when the HTML is used to create a Blob object.
+
+**Open questions**
+
+With these ideas in mind, I decided to pick apart the jQuery function in jQuery-Word-Export and translate it to pure JavaScript.
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Blob) tells me that Blob is just a general browser feature: so this rewrite should be possible.
 
