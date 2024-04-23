@@ -85,5 +85,3 @@ After some trial and error, I got it working! The name of the resulting file is 
 But at least on my computer it has all the functionalities of an ordinary Word document, and users can if they so which save it as a .doc or .docx file.
 
 There are still many open questions on my mind. What exactly is Blob doing? What is “Single File Webpage (.mht)” exactly?
-
-But I am very happy to see that the background knowledge I slowly gathered over the last few months lead me to where I am now. Without periodic small successes like this, it is hard to be motivated to dig deeper and deeper into
