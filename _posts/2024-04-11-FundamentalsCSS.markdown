@@ -25,7 +25,7 @@ More from Kevin Powell:
 - [Video on good learning resources](https://www.youtube.com/watch?v=2GeMknXoGaA&t=605s)
 
 Games recommended in the video:
-- [Flexbox Frogg](https://flexboxfroggy.com/)
+- [Flexbox Froggy](https://flexboxfroggy.com/)
 - [Grid Garden](https://cssgridgarden.com/)
 
 - [CSS dinner](https://flukeout.github.io/)
