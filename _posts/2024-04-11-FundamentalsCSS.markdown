@@ -27,8 +27,9 @@ More from Kevin Powell:
 Games recommended in the video:
 - [Flexbox Frogg](https://flexboxfroggy.com/)
 - [Grid Garden](https://cssgridgarden.com/)
-- [Grid attack](https://codingfantasy.com/games/css-grid-attack)
+
 - [CSS dinner](https://flukeout.github.io/)
 
 See also:
 - [Code pip](https://codepip.com/) by the author of Flexbox Froggy and Grid Garden
+- [2022 List of CSS games](https://dev.to/dailydevtips1/10-amazing-games-to-learn-css-382i)
