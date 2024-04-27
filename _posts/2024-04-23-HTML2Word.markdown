@@ -33,9 +33,9 @@ However, Pandoc is itself written in Haskell. Judging by its name, pandoc-server
 
 This a bit too advanced for me, so I shelved this after reading a bit into the background.
 
-***NPM packages*** such as [html-to-docx](https://www.npmjs.com/package/html-to-docx), [html-docx-js](https://github.com/evidenceprime/html-docx-js) and [node-pandoc](https://www.npmjs.com/package/node-pandoc).
+***NPM packages*** such as [redocx](https://stackoverflow.com/a/59303847/19767032), [html-to-docx](https://www.npmjs.com/package/html-to-docx), [html-docx-js](https://github.com/evidenceprime/html-docx-js) and [node-pandoc](https://www.npmjs.com/package/node-pandoc).
 
-But the problem with these packages is that they seem to be a few years old, and their demos often don’t work any more (which do not inspire a great deal of confidence).
+But the problem with these packages is that they seem to be a few years old, and their demos often don’t work any more (which do not inspire a great deal of confidence).  It seems [html-to-docx](https://stackoverflow.com/a/58392737/19767032) works only on a Microsoft machine, while [redocx](https://github.com/nitin42/redocx/tree/master/docs)
 
 ***[jQuery-Word-Export](https://github.com/markswindoll/jQuery-Word-Export)*** This is an even older project (over 10 years old)! But it has a [demo](https://markswindoll.github.io/jquery-word-export/) that still does work.
 
