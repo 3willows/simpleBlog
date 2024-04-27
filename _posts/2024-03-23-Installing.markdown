@@ -2,7 +2,7 @@
 layout: post
 title:  "Installing Jekyll on a Mac in March 2024"
 date:   2024-03-23
-categories: setting up 
+categories: meta
 ---
 **Why**
 

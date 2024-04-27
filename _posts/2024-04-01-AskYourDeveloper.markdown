@@ -2,7 +2,7 @@
 layout: post
 title: "Ask Your Developer"
 date: 2024-04-01
-categories: business 
+categories: meta 
 ---
 
 [Ask Your Developer](https://www.askyourdeveloper.com/) is Twilio co-founder Jeff Lawson’s advice to Businesses looking to survive and prosper in the digital age.  In short, Jeff argues that:
